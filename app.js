@@ -10,12 +10,26 @@ function speak(msg) {
     window.speechSynthesis.speak(speaker);
 }
 
+function notifyMe(msg) {
+    if (!("Notification" in window)) {
+        alert("This browser does not support desktop notification");
+    } else if (Notification.permission === "granted") {
+        const notification = new Notification(msg);
+        // …
+    } else if (Notification.permission !== "denied") {
+        Notification.requestPermission().then((permission) => {
+            if (permission === "granted") {
+                const notification = new Notification(msg);
+            }
+        });
+    }
+}
+
 function myFunction(e) {
     if (e.key == "J" && e.shiftKey) {
         const j = document.getElementById("jogador");
 
-        j.focus();
-        j.style.backgroundColor = "red";
+        notifyMe(j.textContent);
     }
 }
 
