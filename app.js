@@ -12,8 +12,10 @@ function speak(msg) {
 
 function myFunction(e) {
     if (e.key == "J" && e.shiftKey) {
-        const j = document.getElementById("jogador").textContent;
-        speak(j);
+        const j = document.getElementById("jogador");
+
+        j.focus();
+        j.style.backgroundColor = "red";
     }
 }
 
