@@ -14,3 +14,9 @@ function myFunction(e) {
 }
 
 document.addEventListener("keypress", myFunction);
+
+const ficha = {
+    jogador: document.getElementById("jogador"),
+};
+
+ficha.jogador.textContent = `Jogador: ${Math.floor(Math.random() * 1000)}`;
