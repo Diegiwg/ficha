@@ -1,0 +1,33 @@
+Jogador:
+Nome:
+Idade:
+Raça:
+Classe:
+Moedas:
+
+Vida:
+Mana:
+Vigor:
+Nível: 0
+Experiência atual: 0
+
+Força:
+Agilidade:
+Vitalidade:
+Inteligência:
+Espiritualidade:
+
+Dano normal: d20
+Dano mágico: d20
+Defesa normal: d20
+Defesa mágica: d20
+
+    Inventário:
+
+    Habilidades:
+
+    Magias:
+
+    Idiomas:
+
+    Anotações:
