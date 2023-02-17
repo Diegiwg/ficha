@@ -1,5 +1,5 @@
 function random(max) {
-    return Math.floor(Math.random() * max);
+    return Math.round(Math.random() * max);
 }
 
 const app = document.getElementById("app");
@@ -25,6 +25,11 @@ const ficha = {
     vitalidade: document.getElementById("vitalidade"),
 };
 
-ficha.jogador.textContent = random(1000);
-ficha.vitalidade.textContent = random(10);
-ficha.vida_total.textContent = 100 + ficha.vitalidade.textContent * 10;
+const jogador = random(1000);
+ficha.jogador.textContent = `Jogador: ${jogador}`;
+
+const vitalidade = random(10);
+ficha.vitalidade.textContent = `Vitalidade: ${vitalidade}`;
+
+const vida_total = 100 + vitalidade * 10;
+ficha.vida_total.textContent = `Vida: ${random(vida_total)} de ${vida_total}`;
